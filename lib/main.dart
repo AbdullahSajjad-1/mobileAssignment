@@ -21,7 +21,7 @@ class AspenApp extends StatelessWidget {
   }
 }
 
-// --- ONBOARDING SCREEN ---
+
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
 
@@ -30,14 +30,14 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Background Image
+
           Positioned.fill(
             child: Image.asset(
               'assets/images/aspenHome.jpg',
               fit: BoxFit.cover,
             ),
           ),
-          // Content
+
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
@@ -102,7 +102,7 @@ class OnboardingScreen extends StatelessWidget {
   }
 }
 
-// --- HOME SCREEN ---
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -223,7 +223,7 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// --- SUPPORTING WIDGETS ---
+
 
 class CategoryTab extends StatelessWidget {
   final String title;
@@ -354,7 +354,7 @@ class RecommendedCard extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(16),
-            // FIXED LINE BELOW: Added check for local vs network image
+
             child: image.startsWith('http')
                 ? Image.network(image, width: double.infinity, height: 80, fit: BoxFit.cover)
                 : Image.asset(image, width: double.infinity, height: 80, fit: BoxFit.cover),
